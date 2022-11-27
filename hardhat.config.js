@@ -11,9 +11,7 @@ require("hardhat-deploy")
  */
 
 const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY || ""
-const MUMBAI_RPC_URL =
-    process.env.MUMBAI_RPC_URL ||
-    ""
+const MUMBAI_RPC_URL = process.env.MUMBAI_RPC_URL || ""
 const PRIVATE_KEY =
     process.env.PRIVATE_KEY ||
     "0x11ee3108a03081fe260ecdc106554d09d9d1209bcafd46942b10e02943effc4a"
@@ -32,11 +30,6 @@ module.exports = {
             chainId: 80001,
             blockConfirmations: 6,
         },
-        localganache:{
-            url: "http://127.0.0.1:7545",
-            accounts: [process.env.GANACHE_PRIVATE],
-            chanId: 5777,
-        }
     },
     solidity: {
         compilers: [
@@ -68,4 +61,3 @@ module.exports = {
         timeout: 500000,
     },
 }
-  
